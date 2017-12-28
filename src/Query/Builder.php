@@ -651,7 +651,7 @@ class Builder {
 			$properties = [];
 		}
 
-		if ( isset( $options ) ) {
+		if ( isset( $options ) && ! is_array( $options ) ) {
 			$include_count = $options & QueryOptions::INCLUDE_COUNT;
 
 			if ( $include_count ) {
